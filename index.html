@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>ACE in Action</title>
+    </head>
+    <body class="font-sans">
+        <main class="flex">
+            <div class="w-6/12 p-2 h-screen">
+                <div class="w-full flex items-center h-20" id="buttons">
+                    <button
+                        id="btnReset"
+                        class="text-yellow-700 uppercase p-2 flex items-center border border-yellow-700 rounded-md mr-2"
+                    >
+                        <i class="fa-solid fa-rotate-right fa-2x mr-2"></i>Reset
+                    </button>
+                    <button
+                        id="btnRun"
+                        class="text-green-700 uppercase p-2 flex items-center border border-green-700 rounded-md mr-2"
+                    >
+                        <i class="fa-solid fa-play fa-2x mr-2"></i>Run
+                    </button>
+                    <div
+                        class="flex items-center border border-blue-700 rounded-md p-2 text-blue-700"
+                    >
+                        <input type="checkbox" id="btnLive" class="mr-1" />
+                        <i class="fa-solid fa-clock-rotate-left fa-2x mr-2"></i
+                        ><span class="uppercase">Live</span>
+                    </div>
+                </div>
+                <div class="w-full h-4/6" id="editor"></div>
+            </div>
+            <div class="w-1 bg-gray-300"></div>
+            <div class="w-6/12 p-2 h-full">
+                <iframe class="w-full h-80" id="output"></iframe>
+            </div>
+        </main>
+
+        <!-- load ace -->
+        <script
+            src="/ace-builds/src/ace.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script src="/ace-builds/src/ext-language_tools.js"></script>
+        <script src="editorControllers.js"></script>
+    </body>
+</html>
